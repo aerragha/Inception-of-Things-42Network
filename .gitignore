@@ -1,0 +1,11 @@
+.vagrant
+
+# p1 ignores
+p1/.vagrant
+scripts/node-token
+
+# p2 ignores
+p2/.vagrant
+
+# p3 ignores
+p3/.vagrant
