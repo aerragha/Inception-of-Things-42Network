@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "Executing server.sh with arg $1"
-
 # Install net-tools to use the ifconfig command
 yum install net-tools -y
 
