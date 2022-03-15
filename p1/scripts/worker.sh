@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "Executing worker.sh with arg $1"
-
 # Install net-tools to use the ifconfig command
 sudo yum install net-tools -y
 
