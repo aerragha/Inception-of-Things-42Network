@@ -28,8 +28,8 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Docker Engine
-sudo apt-get update -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo sudo apt-get update -y
+sudo sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Install K3D
 echo "Install K3D"
@@ -50,7 +50,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ### https://en.sokube.ch/post/gitops-on-a-laptop-with-k3d-and-argocd-1
 
 echo "Create K3d cluster"
-k3d cluster create mycluster -p 8080:80@loadbalancer -p 8888:30080@loadbalancer --k3s-arg "--disable=traefik@server:0"
+k3d cluster create mycluster -p 8080:80@loadbalancer -p 8888:30080@loadbalancer --agents 2 --k3s-arg "--disable=traefik@server:0"
 
 echo "Create argocd and dev namespaces"
 kubectl create namespace argocd
