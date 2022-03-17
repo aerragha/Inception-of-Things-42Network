@@ -68,6 +68,7 @@ echo "Config Access to Argo CD Server"
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 
 echo "Waiting Argo CD Config"
+params="-n argocd -l app.kubernetes.io/name=argocd-server --timeout=10m"
 kubectl wait --for=condition=available deployment $params
 kubectl wait --for=condition=ready pod $params
 
