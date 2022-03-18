@@ -28,8 +28,8 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Docker Engine
-sudo sudo apt-get update -y
-sudo sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Install K3D
 echo "Install K3D"
