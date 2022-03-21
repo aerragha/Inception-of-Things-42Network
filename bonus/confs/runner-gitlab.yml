@@ -35,7 +35,7 @@ metrics:
 ## Configuration for the Pods that that the runner launches for each new job
 runners:
   ## Default container image to use for builds when none is specified
-  image: ubuntu:18.04
+  image: ubuntu:20.04
 
   ## Specify whether the runner should be locked to a specific project: true, false. Defaults to true.
   locked: false

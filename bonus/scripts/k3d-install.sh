@@ -5,9 +5,14 @@ echo "Install net-tools to use commands like ifconfig"
 sudo apt install net-tools -y
 
 # Add k alias to all users
-echo "Add k alias to all users"
-sudo echo "alias k='kubectl'" >> /etc/profile.d/00-aliases.sh
-sudo source /etc/profile.d/00-aliases.sh
+# echo "Add k alias to all users"
+# sudo echo "alias k='kubectl'" >> /etc/profile.d/00-aliases.sh
+# sudo source /etc/profile.d/00-aliases.sh
+
+# Add k alias to all users
+echo "Add Kubectl alias"
+sudo echo "alias k='kubectl'" >> ~/.bashrc
+sudo source ~/.bashrc
 
 #### Install Docker follow official doc ####
 ### https://docs.docker.com/engine/install/ubuntu/
