@@ -1,0 +1,20 @@
+#RBAC, Role-based access control, is an authorization mechanism for managing permissions around Kubernetes resources
+#GitLab access to kubernetes
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gitlab
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: gitlab-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: gitlab
+    namespace: kube-system
