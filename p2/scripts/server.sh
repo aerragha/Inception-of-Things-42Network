@@ -10,13 +10,13 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--write-kubeconfig-mode=644 --b
 echo "alias k='kubectl'" > /etc/profile.d/aliases.sh
 
 echo "Setup Web App 1"
-/usr/local/bin/kubectl apply -f /vagrant/config/app1.yaml -n kube-system
+/usr/local/bin/kubectl apply -f /vagrant/confs/app1.yaml -n kube-system
 
 echo "Setup Web App 2"
-/usr/local/bin/kubectl apply -f /vagrant/config/app2.yaml -n kube-system
+/usr/local/bin/kubectl apply -f /vagrant/confs/app2.yaml -n kube-system
 
 echo "Setup Web App 3"
-/usr/local/bin/kubectl apply -f /vagrant/config/app3.yaml -n kube-system
+/usr/local/bin/kubectl apply -f /vagrant/confs/app3.yaml -n kube-system
 
 echo "Create Ingress"
-/usr/local/bin/kubectl apply -f /vagrant/config/ingress.yaml -n kube-system
+/usr/local/bin/kubectl apply -f /vagrant/confs/ingress.yaml -n kube-system
